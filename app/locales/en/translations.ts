@@ -376,6 +376,10 @@ export default {
         privacy: 'Privacy&nbsp;Policy',
         separator: ' | ',
     },
+    new_home: {
+        header: 'The place to share your research',
+        subHeader: 'OSF is a free, open platform to support your research and enable collaboration.',
+    },
     home: {
         title: 'Home',
         youtube_modal_title: 'Getting Started with OSF',
@@ -1348,6 +1352,11 @@ export default {
             add_institution_error: 'Error adding institution',
             remove_institution_error: 'Error removing institution',
             no_affiliations: 'No affiliations to add',
+        },
+        'discover-research': {
+            discover_research_header: 'Discover public research',
+            discover_research_subheader: 'Discover projects, data, materials, and collaborators, on OSF that might be helpful to your own research.',
+            discover_input_placeholder: 'Search discipline, author...',
         },
     },
     settings: {
