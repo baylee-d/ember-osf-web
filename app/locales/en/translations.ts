@@ -1355,7 +1355,7 @@ export default {
         },
         'discover-research': {
             discover_research_header: 'Discover public research',
-            discover_research_subheader: 'Discover projects, data, materials, and collaborators, on OSF that might be helpful to your own research.',
+            discover_research_subheader: 'Discover projects, data, materials, and collaborators on OSF that might be helpful to your own research.',
             discover_input_placeholder: 'Search discipline, author...',
         },
     },
