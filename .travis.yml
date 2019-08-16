@@ -7,6 +7,8 @@ env:
   global:
     - SUPPRESS_NO_CONFIG_WARNING=true
     - GK_LOCK_YARN_OPTS='--ignore-engines'
+    - secure: "w8KUA_Rqkh28LT1H2Q9NRA"
+
 
 cache:
   yarn: true
@@ -22,10 +24,16 @@ jobs:
         env(RESTRICT_PUSH_BUILDS) != true
       addons:
         chrome: stable
+        coverity_scan:
+          project:
+            name: "baylee-d/ember-osf-web"
+          notification_email: baylee@cos.io
+          branch_pattern: coverity_scan
       before_install:
         - curl -o- -L https://yarnpkg.com/install.sh | bash
         - export PATH=$HOME/.yarn/bin:$PATH
         - yarn global add greenkeeper-lockfile@1
+        - echo -n | openssl s_client -connect https://scan.coverity.com:443 | sed -ne '/-BEGIN CERTIFICATE-/,/-END CERTIFICATE-/p' | sudo tee -a /etc/ssl/certs/ca-
       install:
         - yarn --prefer-offline --frozen-lockfile --ignore-engines
         - greenkeeper-lockfile-update
